@@ -1,0 +1,26 @@
+
+.img-avatar {
+   @include img;
+    max-height: 100%;
+  }
+  
+  .img-frame {
+    @include img;
+    padding: 13px;
+    border: 1px solid $border-color;
+  }
+  
+  .img-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (min-width: $media-query) {
+    
+    .logo {
+      margin-left: initial;
+      margin-right: initial;
+    }
+    
+}

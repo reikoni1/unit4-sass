@@ -1,0 +1,41 @@
+* {
+    color: #777;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 1.45em;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+
+* {font-family: "lato", sans-serif}
+
+
+.headline-primary {
+    color: $primary-color;
+    margin-left: 10px;
+  }
+  
+.headline-secondary {
+    color: $base-color;
+    font-weight: 300;
+}
+  
+.link {
+    color: $link-color;
+    font-weight: 700;
+}
+  
+  .blockquote {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $primary-color;
+    border-radius: 5px;
+  }

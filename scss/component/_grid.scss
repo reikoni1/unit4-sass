@@ -1,0 +1,65 @@
+
+.container {
+    padding: 0 10px;
+  }
+  
+.row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 10px;
+}
+  
+[class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+.card {
+    flex-basis: 100%;
+ }
+
+ @for $i from 1 through 12 {
+    .theme.col-#{$i} {
+        background-color: adjust-hue(#aadfe0, $i * 30);
+    }
+}
+
+@media (min-width: $media-query) {
+
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  [class^=col] {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
+
+  @for $i from 1 to 12 {
+    .col-#{$i} {
+        flex-basis: $i * 1% * (100 / 12);
+    }
+}
+}

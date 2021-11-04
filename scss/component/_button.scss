@@ -1,0 +1,38 @@
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $blank-color;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    animation-duration: 1s;
+    transition: 0.5s;
+}
+    
+@each $button in $buttons {
+    &{
+        background-color: map-get($btn-colors, $button);  
+    }
+}
+    
+    
+@each $button in $buttons {
+  &:hover {
+      background-color: lighten($color: map-get($btn-colors, $button), $amount: 15%);
+  }
+}
+
+
+@media (min-width: $media-query) {
+
+ 
+    
+    .btn {
+      padding: 10px 30px;
+    }
+    
+    .btn + .btn {
+      margin-left: 10px;
+    }
+}
