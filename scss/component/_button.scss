@@ -11,14 +11,14 @@
 }
     
 @each $button in $buttons {
-    &{
+    .#{$button}{
         background-color: map-get($btn-colors, $button);  
     }
 }
     
     
 @each $button in $buttons {
-  &:hover {
+  .#{$button}:hover {
       background-color: lighten($color: map-get($btn-colors, $button), $amount: 15%);
   }
 }
